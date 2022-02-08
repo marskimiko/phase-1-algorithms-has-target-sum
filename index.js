@@ -1,5 +1,14 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  //let indexes = [];
+
+  for (let i = 0; i < array.length; i++) {
+    for (let j = i +1; j < array.length; j++) {
+      if (array[i] + array[j] === target) {
+        return true;
+      }
+    }
+  }
+  return false;
 }
 
 /* 
@@ -8,6 +17,8 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  iterates through the array
+  checks if first two numbers ad up to the target, if not adds the 2nd and 3rd number together and so on until either two numbers add up to the target: return true / or reaches end of array without adding up the target and returns false
 */
 
 /*
